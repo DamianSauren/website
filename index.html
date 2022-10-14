@@ -6,13 +6,13 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="style.css" />
-	<script src="https://kit.fontawesome.com/f26ecdb696.js" crossorigin="anonymous"></script>
-	<script src="./main.js"></script>
 	<title>Website</title>
 </head>
 
 <body>
-	<div id="trailer">Test</div>
+	<div id="trailer">
+		<i id="trailer-icon" class="fa-solid fa-arrow-up-right"></i>
+	</div>
 
 	<nav data-toggled="false" data-transitionable="false">
 		<div id="nav-logo-section" class="nav-section">
@@ -29,7 +29,7 @@
 				<a href="#">
 					<i class="fa-brands fa-twitter"></i>
 				</a>
-				<a href="https://www.youtube.com/c/Hyperplexed" target="_blank">
+				<a href="https://www.youtube.com/c/Hyperplexed" target="_blank" data-type="video" class="interactable">
 					<i class="fa-brands fa-youtube"></i>
 				</a>
 				<a href="#">
@@ -48,7 +48,7 @@
 
 	<main>
 		<article data-index="0" data-status="active">
-			<div class="article-image-section article-section"></div>
+			<div class="article-image-section article-section interactable" data-type="link"></div>
 			<div class="article-description-section article-section">
 				<p>
 					This is a recreation (from scratch) of
@@ -59,7 +59,7 @@
 				</p>
 			</div>
 			<div class="article-title-section article-section">
-				<h2>Recreation From Scratch</h2>
+				<h2>Recreation From <span class="gradient">Scratch</span></h2>
 				<i class="fa-light fa-plus-large"></i>
 			</div>
 			<div class="article-nav-section article-section">
@@ -72,7 +72,7 @@
 			</div>
 		</article>
 		<article data-index="1" data-status="inactive">
-			<div class="article-image-section article-section"></div>
+			<div class="article-image-section article-section interactable" data-type="link"></div>
 			<div class="article-description-section article-section">
 				<p>
 					A place where books hang out waiting to be grabbed. But don't be too
@@ -93,7 +93,7 @@
 			</div>
 		</article>
 		<article data-index="2" data-status="inactive">
-			<div class="article-image-section article-section"></div>
+			<div class="article-image-section article-section interactable" data-type="link"></div>
 			<div class="article-description-section article-section">
 				<p>
 					The neatest lighthouse you ever saw. Ehh, actually it's kind of
@@ -114,7 +114,7 @@
 			</div>
 		</article>
 		<article data-index="3" data-status="inactive">
-			<div class="article-image-section article-section"></div>
+			<div class="article-image-section article-section interactable" data-type="link"></div>
 			<div class="article-description-section article-section">
 				<p>
 					The blobiest of blobs nestled deep in the heart of outer space.
@@ -136,6 +136,9 @@
 			</div>
 		</article>
 	</main>
+
+	<script src="./main.js"></script>
+	<script src="https://kit.fontawesome.com/f26ecdb696.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

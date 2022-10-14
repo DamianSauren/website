@@ -3,6 +3,9 @@
 	--border-color: rgb(255, 255, 255, 0.1);
 	--highlight-color: rgb(126, 87, 194);
 	--yt-color: rgb(229, 57, 53);
+	--purple: rgb(123, 31, 162);
+	--violet: rgb(103, 58, 183);
+	--pink: rgb(244, 143, 177);
 }
 
 body {
@@ -190,6 +193,14 @@ main>article:nth-child(4)>.article-image-section {
 main>article>.article-image-section {
 	background-position: center;
 	background-size: cover;
+	opacity: 0.4;
+	background-size: 100%;
+	transition: background-size 400ms ease, opacity 400ms ease;
+}
+
+main>article>.article-image-section:hover {
+	opacity: 0.8;
+	background-size: 105%;
 }
 
 main>article>.article-description-section {
@@ -421,8 +432,48 @@ main>article .yt-link>i {
 	pointer-events: none;
 	opacity: 0;
 	transition: opacity 500ms ease;
+
+	display: grid;
+	place-items: center;
+}
+
+#trailer:not([data-type=""])>#trailer-icon {
+	opacity: 1;
+}
+
+#trailer-icon {
+	font-size: 6px;
+	line-height: 4px;
+
+	opacity: 0;
+	transition: opacity 400ms ease;
 }
 
 body:hover>#trailer {
 	opacity: 1;
+}
+
+/* -- Text Gradient -- */
+.gradient {
+	animation: background-pan 3s linear infinite;
+	background: linear-gradient(to right,
+			var(--purple),
+			var(--violet),
+			var(--pink),
+			var(--purple));
+	background-size: 200%;
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	white-space: nowrap;
+}
+
+@keyframes background-pan {
+	from {
+		background-position: 0% center;
+	}
+
+	to {
+		background-position: -200% center;
+	}
 }
